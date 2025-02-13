@@ -13,11 +13,11 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Configurar SSH para VPS
+      - name: Configure SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Conectar à VPS e fazer pull
+      - name: Connect and pull
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd  codes/portfolio-central/portifolio-front && git pull && cd .. && docker-compose down && docker-compose up -d'

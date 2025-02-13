@@ -13,19 +13,6 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Deploy no servidor via SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd codes/portfolio-central/portifolio-front
-            git pull origin main
-            cd ..
-            docker-compose down
-            docker-compose up -d
-
       - name: Configurar SSH para VPS
         uses: webfactory/ssh-agent@v0.5.3
         with:

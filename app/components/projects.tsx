@@ -44,15 +44,22 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
 
 export const Projects: React.FC = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <>
+      {projects.length !== 0 &&
+        <>
+          <h1 className="text-4xl">Projetos</h1>
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      }
+    </>
   );
 };
 

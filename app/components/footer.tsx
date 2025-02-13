@@ -1,5 +1,4 @@
 import { Link } from "@remix-run/react";
-import { FaHeart } from "react-icons/fa";
 import { socialNetworks } from "../constants/social-networks";
 
 export function Footer() {
@@ -8,8 +7,8 @@ export function Footer() {
   return (
     <div className="container mx-auto my-4 flex flex-col items-center gap-3 text-gray-400 md:flex-row md:justify-between md:gap-0">
       <div className="text-sm flex gap-2 items-center text-center">
-        &copy; {year} Feito com <FaHeart className="text-purple-500" /> por
-        Tifany Nunes
+        &copy; {year} Template feito por
+        <Link to="https://pinuya.site" target="_blank" className="text-blue-400">Tifany Nunes</Link>
       </div>
 
       {/* suas redes sociais */}

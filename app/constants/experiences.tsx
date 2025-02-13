@@ -2,23 +2,23 @@
 export const experiences = [
   {
     company: "Hubfy",
-    period: "Out 2024 - Presente",
-    role: "Front-End Engineer",
+    period: "Jun 2023 - Presente",
+    role: "Tech Leader - Fullstack Engineer",
     description:
-      "Desenvolvendo Front-End com Tailwind, React em uma aplicação Next.js.",
+      "Atuando como Fullstack Engineer Pleno e Tech Leader, mantendo aplicações legadas em Laravel e Slim, além de arquitetar e codificar novas soluções em Next.js, React e FastAPI.",
   },
-  {
-    company: "Autônoma",
-    period: "Jan 2022 - Presente",
-    role: "Software Engineer",
-    description:
-      "Como Desenvolvedora Fullstack autônoma, aplicava uma ampla gama de tecnologias para criar soluções web robustas e escaláveis, utilizando conhecimentos tanto em back-end quanto em front-end.",
-  },
-  {
-    company: "Centro Universitário Vale do Salgado",
-    period: "Mar 2021 - Fev 2022",
-    role: "Desenvolvedora Front-End",
-    description:
-      "Como Estagiária em Desenvolvimento Front-end na UNIVS, estou começando a minha jornada na criação de interfaces web interativas e responsivas.",
-  },
+  // {
+  //   company: "Autônoma",
+  //   period: "Jan 2022 - Presente",
+  //   role: "Software Engineer",
+  //   description:
+  //     "Como Desenvolvedora Fullstack autônoma, aplicava uma ampla gama de tecnologias para criar soluções web robustas e escaláveis, utilizando conhecimentos tanto em back-end quanto em front-end.",
+  // },
+  // {
+  //   company: "Centro Universitário Vale do Salgado",
+  //   period: "Mar 2021 - Fev 2022",
+  //   role: "Desenvolvedora Front-End",
+  //   description:
+  //     "Como Estagiária em Desenvolvimento Front-end na UNIVS, estou começando a minha jornada na criação de interfaces web interativas e responsivas.",
+  // },
 ];

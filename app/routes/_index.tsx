@@ -1,5 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { motion } from "motion/react";
+
+import { ResponseI } from "~/interfaces/api";
+
 import Experience from "~/components/experience";
 import Projects from "~/components/projects";
 import Skills from "~/components/skills";
@@ -14,7 +18,22 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+
+export async function loader() {
+  const response = await fetch("https://api.hudsondev.tech");
+  const data = await response.json();
+
+  return new Response(JSON.stringify(data), {
+    headers: { "Content-Type": "application/json" },
+  })
+};
+
+
 export default function Index() {
+  const data: ResponseI = useLoaderData();
+
+  console.log(data)
+
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* background */}
@@ -87,9 +106,9 @@ export default function Index() {
           <h1 className="text-4xl text-center">Habilidades e experiência</h1>
 
           <div className="flex flex-col gap-28">
-            <Skills />
+            <Skills skills={data.skills} />
 
-            <Experience />
+            <Experience experiences={data.experiences}/>
           </div>
         </motion.section>
 
@@ -99,7 +118,7 @@ export default function Index() {
           id="projects"
           className="mt-20 flex flex-col items-center justify-center"
         >
-          <Projects />
+          <Projects projects={data.projects} />
         </motion.section>
       </div>
     </div>

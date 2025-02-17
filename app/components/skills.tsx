@@ -1,8 +1,10 @@
 import React from "react";
-import { skills, SkillI } from "../constants/skills";
 
+import { SkillsI, SkillI } from "~/interfaces/api";
+import { skillIcons } from "~/icons/skills";
 
 const SkillIcon = ({ skill }: { skill: SkillI }) => {
+  const IconComponent = skillIcons[skill.icon]; 
   const [showTooltip, setShowTooltip] = React.useState(false);
 
   return (
@@ -11,7 +13,7 @@ const SkillIcon = ({ skill }: { skill: SkillI }) => {
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <skill.icon className="w-6 h-6 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer" />
+        <IconComponent className="w-6 h-6 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer" />
       </div>
 
       {showTooltip && (
@@ -43,7 +45,7 @@ const SkillCategory = ({
   </div>
 );
 
-export default function Skills() {
+export default function Skills({ skills }: { skills: SkillsI[] }) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {skills.map(skill => <SkillCategory title={skill.title} skills={skill.skills} />)}

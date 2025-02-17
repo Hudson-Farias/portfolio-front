@@ -1,11 +1,11 @@
 import type React from "react";
-import { projects, ProjectI } from "../constants/projects";
+import { ProjectI } from "~/interfaces/api";
 
 const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
   return (
     <div className="bg-gray-800/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
       <img
-        src={project.imageUrl || "/placeholder.svg"}
+        src={project.image_url || "/placeholder.svg"}
         alt={project.title}
         className="w-full h-48 object-cover"
       />
@@ -16,9 +16,9 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
         <p className="text-gray-400 mb-4">{project.description}</p>
 
         <div className="flex gap-4">
-          {project.liveUrl && (
+          {project.live_url && (
             <a
-              href={project.liveUrl}
+              href={project.live_url}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full transition-colors duration-300"
@@ -26,9 +26,9 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
               Ver Site
             </a>
           )}
-          {project.repoUrl && (
+          {project.repo_url && (
             <a
-              href={project.repoUrl}
+              href={project.repo_url}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium px-4 py-2 text-white rounded-full hover:bg-gray-600 transition-colors duration-300"
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
   );
 };
 
-export const Projects: React.FC = () => {
+export default function Projects({ projects }: { projects: ProjectI[] }) {
   return (
     <>
       {projects.length !== 0 &&
@@ -62,5 +62,3 @@ export const Projects: React.FC = () => {
     </>
   );
 };
-
-export default Projects;

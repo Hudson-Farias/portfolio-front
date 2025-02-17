@@ -1,7 +1,7 @@
 import { MdWork } from "react-icons/md";
-import { experiences } from "../constants/experiences";
+import { ExperienceI } from "~/interfaces/api";
 
-export default function Experience() {
+export default function Experience({ experiences }: { experiences: ExperienceI[] }) {
   return (
     <div className="relative">
       {experiences.map((exp, index) => (

@@ -19,5 +19,6 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Connect and pull
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd  codes/portfolio-central/portifolio-front && git pull && cd .. && docker-compose down && docker-compose up -d --build'
+        run: |          
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+          'cd codes/portfolio-central/portifolio-front && git pull && cd .. && nohup docker-compose up -d --build > deploy.log 2>&1 & disown'

@@ -5,7 +5,7 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
   return (
     <div className="bg-gray-800/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
       <img
-        src={project.image_url || "/placeholder.svg"}
+        src={project.image_url || "/not-found.png"}
         alt={project.title}
         className="w-full h-48 object-cover"
       />

@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { motion } from "motion/react";
 
 import { ResponseI } from "~/interfaces/api";
@@ -64,11 +64,18 @@ export default function Index() {
 
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
                 <span className="text-gray-400">
-                  Back-End Developer | DevOps
+                  Software Engineer | DevOps
                 </span>
                 <p className="text-gray-400 w-96 mt-4">
-                  Um <b>Software Developer</b> com foco no <b>Back-End</b>.
-                  Busco sempre desenvolver soluções simples e otimizadas, garantindo eficiência e qualidade nas implementações.
+                  Um <b>Software Engineer</b> com foco no <b>Back-End</b>.
+                  Busco sempre desenvolver soluções simples e otimizadas, garantindo eficiência e qualidade nas implementações.Voce pode
+                    conferir meu{" "}
+                    <Link to={"/curriculum"}>
+                      <span className="relative bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent cursor-pointer group">
+                        curriculo aqui.
+                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-300 to-purple-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                      </span>
+                    </Link>
                 </p>
               </motion.div>
             </div>
@@ -106,7 +113,7 @@ export default function Index() {
           <div className="flex flex-col gap-28">
             <Skills skills={data.skills} />
 
-            <Experience experiences={data.experiences}/>
+            <Experience experiences={data.experiences} />
           </div>
         </motion.section>
 

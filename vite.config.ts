@@ -9,6 +9,11 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ["@/portfolio-icons-lib"]
+    }
+  },
   plugins: [
     remix({
       future: {

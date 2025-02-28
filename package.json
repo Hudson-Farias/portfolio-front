@@ -11,7 +11,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-  "@/portfolio-icons-lib": "file:../portfolio-icons-lib",
+    "@/portfolio-icons-lib": "file:../portfolio-icons-lib",
     "@remix-run/node": "^2.15.3",
     "@remix-run/react": "^2.15.3",
     "@remix-run/serve": "^2.15.3",

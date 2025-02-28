@@ -3,8 +3,25 @@ import React from "react";
 import { SkillsI, SkillI } from "~/interfaces/api";
 import { skillIcons } from "~/icons/skills";
 
+import { useState, useEffect, ReactNode } from 'react';
+
+const ClientOnly = ({ children }: { children: ReactNode }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) { return <></>; }
+
+  return <>{children}</>;
+};
+
+
 const SkillIcon = ({ skill }: { skill: SkillI }) => {
-  const IconComponent = skillIcons[skill.icon]; 
+  const IconComponent = skillIcons[skill.icon];
+  console.log(IconComponent)
+
   const [showTooltip, setShowTooltip] = React.useState(false);
 
   return (
@@ -13,7 +30,9 @@ const SkillIcon = ({ skill }: { skill: SkillI }) => {
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <IconComponent className="w-6 h-6 text-slate-600 hover:text-slate-800 transition-colors cursor-pointer" />
+        <ClientOnly>
+          <IconComponent className="w-6 h-6 text-slate-600 hover:text-slate-800 transition-colors cursor-pointer" />
+        </ClientOnly>
       </div>
 
       {showTooltip && (

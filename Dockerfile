@@ -1,8 +1,9 @@
 FROM oven/bun:latest AS builder
 
-WORKDIR /app
-COPY . ./front
-COPY ../ ./portfolio-icons-lib
+WORKDIR /app/portfolio-icons-lib
+
+WORKDIR /app/front
+COPY . .
 
 RUN bun install --frozen-lockfile
 RUN bun run build

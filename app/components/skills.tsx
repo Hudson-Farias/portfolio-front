@@ -13,7 +13,7 @@ const SkillIcon = ({ skill }: { skill: SkillI }) => {
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <IconComponent className="w-6 h-6 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer" />
+        <IconComponent className="w-6 h-6 text-slate-600 hover:text-slate-800 transition-colors cursor-pointer" />
       </div>
 
       {showTooltip && (

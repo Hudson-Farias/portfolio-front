@@ -38,7 +38,7 @@ export default function Index() {
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-slate-500/10 blur-[100px]" />
       </div>
 
       <div className="flex flex-col min-h-[100dvh] z-10">
@@ -56,24 +56,24 @@ export default function Index() {
                 <h1 className="text-6xl">Hello World.</h1>
                 <h1 className="text-4xl">
                   I'm{" "}
-                  <span className="font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                  <span className="font-bold bg-gradient-to-r from-blue-500 to-slate-500 bg-clip-text text-transparent">
                     Hudson.
                   </span>
                 </h1>
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-                <span className="text-gray-400">
+                <span className="text-slate-400">
                   Software Engineer | DevOps
                 </span>
-                <p className="text-gray-400 w-96 mt-4">
+                <p className="text-slate-400 w-96 mt-4">
                   Um <b>Software Engineer</b> com foco no <b>Back-End</b>.
                   Busco sempre desenvolver soluções simples e otimizadas, garantindo eficiência e qualidade nas implementações. Você pode
                     conferir meu{" "}
                     <Link to={"/curriculum"}>
-                      <span className="relative bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent cursor-pointer group">
+                      <span className="relative bg-gradient-to-r from-blue-300 to-slate-500 bg-clip-text text-transparent cursor-pointer group">
                         curriculo aqui.
-                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-300 to-purple-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-300 to-slate-500 transition-all duration-300 ease-in-out group-hover:w-full" />
                       </span>
                     </Link>
                 </p>
@@ -81,7 +81,7 @@ export default function Index() {
             </div>
 
             <motion.img
-              src="/profilePic.jpg"
+              src="/profile.jpeg"
               className="rounded-full"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -96,7 +96,7 @@ export default function Index() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <div className="w-1 h-12 bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-pulse"></div>
+            <div className="w-1 h-12 bg-gradient-to-b from-blue-600 to-slate-600 dark:from-blue-400 dark:to-slate-400 rounded-full animate-pulse"></div>
           </motion.div>
         </section>
 

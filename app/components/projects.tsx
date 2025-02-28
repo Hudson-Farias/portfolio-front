@@ -3,7 +3,7 @@ import { ProjectI } from "~/interfaces/api";
 
 const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
   return (
-    <div className="bg-gray-800/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+    <div className="bg-slate-800/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
       <img
         src={project.image_url || "/not-found.png"}
         alt={project.title}
@@ -13,7 +13,7 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
         <h3 className="text-xl font-semibold text-white mb-2">
           {project.title}
         </h3>
-        <p className="text-gray-400 mb-4">{project.description}</p>
+        <p className="text-slate-400 mb-4">{project.description}</p>
 
         <div className="flex gap-4">
           {project.live_url && (
@@ -21,7 +21,7 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
               href={project.live_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full transition-colors duration-300"
+              className="font-medium px-4 py-2 bg-gradient-to-r from-blue-500 to-slate-500 text-white rounded-full transition-colors duration-300"
             >
               Ver Site
             </a>
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
               href={project.repo_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium px-4 py-2 text-white rounded-full hover:bg-gray-600 transition-colors duration-300"
+              className="font-medium px-4 py-2 text-white rounded-full hover:bg-slate-600 transition-colors duration-300"
             >
               GitHub Repo
             </a>

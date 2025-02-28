@@ -19,7 +19,7 @@ export default function curriculum() {
         <a
           href="/hudson-resume.pdf"
           download="hudson-resume.pdf"
-          className="inline-flex bg-gradient-to-r from-blue-500 to-purple-500 gap-2 items-center px-4 py-2 text-sm font-medium text-foreground rounded-md transition-transform duration-300 transform hover:scale-105 hover:-translate-y-1"
+          className="inline-flex bg-gradient-to-r from-blue-500 to-slate-500 gap-2 items-center px-4 py-2 text-sm font-medium text-foreground rounded-md transition-transform duration-300 transform hover:scale-105 hover:-translate-y-1"
         >
           <Download /> Baixar Currículo
         </a>

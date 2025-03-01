@@ -1,8 +1,6 @@
 FROM oven/bun:latest AS builder
 
-WORKDIR /app/portfolio-icons-lib
-
-WORKDIR /app/front
+WORKDIR /app
 COPY . .
 
 RUN bun install --frozen-lockfile
@@ -10,10 +8,12 @@ RUN bun run build
 
 FROM oven/bun:latest AS runner
 
-WORKDIR /app/front
-COPY --from=builder /app/front /app/front
+WORKDIR /app
+COPY --from=builder /app /app
 
 ENV NODE_ENV=production
 EXPOSE 3000
+
+RUN bun run build || bash
 
 CMD ["bun", "run", "start"]

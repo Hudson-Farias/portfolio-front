@@ -27,38 +27,3 @@ export const skillIcons = {
     postman: Postman,
     dbeaver: Dbeaver,
 } as const
-
-
-// import { PythonIcon } from "@/portfolio-icons-lib/langs/python";
-// import { TypescriptIcon } from "@/portfolio-icons-lib/langs/typescript";
-// import { PhPIcon } from "@/portfolio-icons-lib/langs/php";
-
-// import { SqlIcon, MongoIcon, RedisIcon } from "@/portfolio-icons-lib";
-// import { NextIcon, ReactIcon, TailwindIcon } from "@/portfolio-icons-lib";
-
-// import { NginxIcon, SwaggerIcon, PostmanIcon, DbeaverIcon } from "@/portfolio-icons-lib";
-// import { CodeIcon, GitIcon, DockerIcon, CloudIcon } from "@/portfolio-icons-lib";
-
-
-// export const skillIcons = {
-//     python: PythonIcon,
-//     typeScript: TypescriptIcon,
-//     php: PhPIcon,
-
-//     sql: SqlIcon,
-//     mongo: MongoIcon,
-//     redis: RedisIcon,
-
-//     nextjs: NextIcon,
-//     react: ReactIcon,
-//     tailwind: TailwindIcon,
-
-//     nginx: NginxIcon,
-//     swagger: SwaggerIcon,
-//     postman: PostmanIcon,
-//     dbeaver: DbeaverIcon,
-//     code: CodeIcon,
-//     git: GitIcon,
-//     docker: DockerIcon,
-//     cloud: CloudIcon,
-// } as const

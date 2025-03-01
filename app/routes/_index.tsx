@@ -20,8 +20,7 @@ export const meta: MetaFunction = () => {
 
 
 export async function loader() {
-  const response = await fetch("http://api:8000");
-  // const response = await fetch("https://hudsondev.tech/api/");
+  const response = await fetch("https://hudsondev.tech/api/");
   const data = await response.json();
 
   return new Response(JSON.stringify(data), {

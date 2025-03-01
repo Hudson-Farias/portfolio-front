@@ -24,7 +24,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "@/portfolio-icons-lib": ["../portfolio-icons-lib"]
+      "@/portfolio-icons-lib/*": ["../portfolio-icons-lib/*"]
     },
 
     // Vite takes care of building everything, not tsc.

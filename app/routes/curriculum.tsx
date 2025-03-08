@@ -17,8 +17,8 @@ export default function curriculum() {
 
       <div className="pt-5">
         <a
-          href="/hudson-resume.pdf"
-          download="hudson-resume.pdf"
+          href="/hudson-farias-resume.pdf"
+          download="hudson-farias-resume.pdf"
           className="inline-flex bg-gradient-to-r from-blue-500 to-slate-500 gap-2 items-center px-4 py-2 text-sm font-medium text-foreground rounded-md transition-transform duration-300 transform hover:scale-105 hover:-translate-y-1"
         >
           <Download /> Baixar Currículo

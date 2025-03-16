@@ -23,11 +23,11 @@ export interface ExperienceI {
 
 export interface ProjectI {
     id: number
-    title: string
+    name: string
     description: string
     image_url: string
-    live_url: string
-    repo_url: string
+    homepage?: string
+    html_url?: string
 }
 
 

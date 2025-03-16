@@ -6,19 +6,19 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
     <div className="bg-slate-800/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
       <img
         src={project.image_url || "/not-found.png"}
-        alt={project.title}
+        alt={project.name}
         className="w-full h-48 object-cover"
       />
       <div className="p-6">
         <h3 className="text-xl font-semibold text-white mb-2">
-          {project.title}
+          {project.name}
         </h3>
         <p className="text-slate-400 mb-4">{project.description}</p>
 
         <div className="flex gap-4">
-          {project.live_url && (
+          {project.homepage && (
             <a
-              href={project.live_url}
+              href={project.homepage}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium px-4 py-2 bg-gradient-to-r from-blue-500 to-slate-500 text-white rounded-full transition-colors duration-300"
@@ -26,9 +26,9 @@ const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
               Ver Site
             </a>
           )}
-          {project.repo_url && (
+          {project.html_url && (
             <a
-              href={project.repo_url}
+              href={project.html_url}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium px-4 py-2 text-white rounded-full hover:bg-slate-600 transition-colors duration-300"

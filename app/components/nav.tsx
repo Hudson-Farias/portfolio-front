@@ -5,7 +5,6 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Skills", href: "/#skills" },
   { name: "Projetos", href: "/#projects" },
-  { name: "Admin", href: "/admin/" },
 ];
 
 export function Nav() {
@@ -23,6 +22,11 @@ export function Nav() {
               </Link>
             </li>
           ))}
+
+          <li>
+            <a href="/admin/">Admin</a>
+          </li>
+
         </ul>
 
         <Link to={"https://github.com/Hudson-Farias"} target="_blank">

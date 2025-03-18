@@ -5,7 +5,7 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Skills", href: "/#skills" },
   { name: "Projetos", href: "/#projects" },
-  { name: "Admin", href: "/admin" },
+  { name: "Admin", href: "/admin/" },
 ];
 
 export function Nav() {

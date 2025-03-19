@@ -1,7 +1,7 @@
 export interface SocialNetworkI {
     id: number
     url: string
-    icon: "github" | "gitlab" | "linkedin"
+    icon: 'linkedin' | 'github' | 'gitlab' | 'twitter' | 'instagram'
 }
 
 

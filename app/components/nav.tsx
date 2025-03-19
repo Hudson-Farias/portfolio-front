@@ -1,5 +1,7 @@
 import { Link } from "@remix-run/react";
-import { FaGithub } from "react-icons/fa";
+
+import { IconComponent } from "~/icons";
+import { SocialNetworkI } from "~/interfaces/social-networks";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -7,7 +9,7 @@ const menuItems = [
   { name: "Projetos", href: "/#projects" },
 ];
 
-export function Nav() {
+export function Nav({ socialNetworks }: { socialNetworks: SocialNetworkI[] }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -29,9 +31,13 @@ export function Nav() {
 
         </ul>
 
-        <Link to={"https://github.com/Hudson-Farias"} target="_blank">
-          <FaGithub className="cursor-pointer hover:text-slate-500 h-5 w-5 hidden sm:block" />
-        </Link>
+        <div className="flex gap-3">
+          {socialNetworks.map((socialNetwork, index) => (
+            <Link to={socialNetwork.url} target="_blank" key={`header-social-network-${index}`}>
+              <IconComponent iconName={socialNetwork.icon} className="cursor-pointer hover:text-slate-500 h-5 w-5 hidden sm:block"/>
+            </Link>
+          ))}
+        </div>
       </nav>
     </header>
   );

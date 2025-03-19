@@ -1,5 +1,5 @@
 import type React from "react";
-import { ProjectI } from "~/interfaces/api";
+import { ProjectI } from "~/interfaces";
 
 const ProjectCard: React.FC<{ project: ProjectI }> = ({ project }) => {
   return (

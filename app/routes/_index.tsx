@@ -2,7 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { motion } from "motion/react";
 
-import { ResponseI } from "~/interfaces/api";
+import { ResponseI } from "~/interfaces";
 
 import Experience from "~/components/experience";
 import Projects from "~/components/projects";
@@ -20,8 +20,8 @@ export const meta: MetaFunction = () => {
 
 
 export async function loader() {
-  const response = await fetch("https://hudsondev.tech/api/");
-  const data = await response.json();
+  const response = await fetch(`${process.env.API_URL}/`);
+  const data: ResponseI = await response.json();
 
   return new Response(JSON.stringify(data), {
     headers: { "Content-Type": "application/json" },

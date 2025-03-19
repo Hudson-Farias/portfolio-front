@@ -1,7 +1,9 @@
 import { Link } from "@remix-run/react";
-import { socialNetworks } from "../constants/social-networks";
 
-export function Footer() {
+import { IconComponent } from "~/icons";
+import { SocialNetworkI } from "~/interfaces/social-networks";
+
+export function Footer({ socialNetworks }: { socialNetworks: SocialNetworkI[] }) {
   const year = new Date().getFullYear();
 
   return (
@@ -11,16 +13,16 @@ export function Footer() {
         <Link to="https://pinuya.site" target="_blank" className="text-blue-400">Tifany Nunes</Link>
       </div>
 
-      {/* suas redes sociais */}
       <div className="flex gap-4">
 
-        {socialNetworks.map((({ url: socialMediaUrl, icon: SocialMediaIcon }) => (
+        {socialNetworks.map(((socialMedia, index) => (
           <Link
-            to={socialMediaUrl}
+            to={socialMedia.url}
             target="_blank"
             className="hover:text-slate-500 transition-colors"
+            key={`footer-social-network-${index}`}
           >
-            <SocialMediaIcon size={20} />
+            <IconComponent iconName={socialMedia.icon} size={20} />
           </Link>
 
         )))}

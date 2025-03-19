@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
@@ -11,6 +12,8 @@ import "./tailwind.css";
 import MouseMoveEffect from "./components/mouse-move-effect";
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
+
+import { SocialNetworksI } from "~/interfaces/social-networks";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,7 +28,20 @@ export const links: LinksFunction = () => [
   },
 ];
 
+
+export async function loader() {
+  const response = await fetch(`${process.env.API_URL}/social_networks`);
+  const data: SocialNetworksI = await response.json();
+
+  return new Response(JSON.stringify(data), {
+    headers: { "Content-Type": "application/json" },
+  })
+};
+
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const data: SocialNetworksI = useLoaderData();
+
   return (
     <html lang="en">
       <head>
@@ -52,12 +68,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       </head>
       <body className="font-dmSans py-4">
-        <Nav />
+        <Nav socialNetworks={data.social_networks_header} />
         {children}
         <MouseMoveEffect />
         <ScrollRestoration />
         <Scripts />
-        <Footer />
+        <Footer socialNetworks={data.social_networks_footer} />
       </body>
     </html>
   );

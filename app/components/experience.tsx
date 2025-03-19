@@ -1,5 +1,5 @@
 import { MdWork } from "react-icons/md";
-import { ExperienceI } from "~/interfaces/api";
+import { ExperienceI } from "~/interfaces";
 
 export default function Experience({ experiences }: { experiences: ExperienceI[] }) {
   return (

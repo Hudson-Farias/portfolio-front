@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SkillsI, SkillI } from "~/interfaces/api";
+import { SkillsI, SkillI } from "~/interfaces";
 import { skillIcons } from "~/icons/skills";
 
 const SkillIcon = ({ skill }: { skill: SkillI }) => {

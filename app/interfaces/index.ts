@@ -31,17 +31,9 @@ export interface ProjectI {
 }
 
 
-export interface SocialNetworkI {
-    id: number
-    url: string
-    icon: string
-}
-
-
 
 export interface ResponseI {
     skills: SkillsI[]
     experiences: ExperienceI[]
     projects: ProjectI[]
-    social_networks: SocialNetworkI[]
 }

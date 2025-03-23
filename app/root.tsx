@@ -36,6 +36,7 @@ export async function loader() {
   return new Response(JSON.stringify(data), {
     headers: { "Content-Type": "application/json" },
   })
+
 };
 
 

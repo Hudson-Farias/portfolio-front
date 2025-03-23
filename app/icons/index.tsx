@@ -5,6 +5,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 
 const icons = {
@@ -13,6 +15,8 @@ const icons = {
   gitlab: FaGitlab,
   twitter: FaXTwitter,
   instagram: FaInstagram,
+  whatsapp: FaWhatsapp,
+  email: IoMdMail,
 }
 
 

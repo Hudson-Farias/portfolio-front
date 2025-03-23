@@ -25,7 +25,7 @@ export default function Curriculum() {
       };
   }
 
-  const pdfUrl = "/hudson-farias-resume.pdf";
+  const pdfUrl = "/hudson-resume.pdf";
   const [numPages, setNumPages] = useState<number | null>(null);
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);

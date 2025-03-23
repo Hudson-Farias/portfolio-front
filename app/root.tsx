@@ -68,13 +68,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
 
       </head>
-      <body className="font-dmSans py-4">
+      <body className="font-dmSans h-screen grid grid-rows-[1fr_14fr] overflow-hidden">
         <Nav socialNetworks={data.social_networks_header} />
-        {children}
-        <MouseMoveEffect />
-        <ScrollRestoration />
+        <div className="overflow-auto scrollbar-thin scrollbar-thumb-blue-500/10 scrollbar-track-slate-500/10">
+          {children}
+          <MouseMoveEffect />
+          <ScrollRestoration />
+          <Footer socialNetworks={data.social_networks_footer} />
+        </div>
         <Scripts />
-        <Footer socialNetworks={data.social_networks_footer} />
       </body>
     </html>
   );

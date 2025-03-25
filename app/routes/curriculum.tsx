@@ -1,7 +1,15 @@
-import { ClientOnly } from "~/components/client-only";
+import { useState, useEffect } from "react";
 import { Curriculum, DownloadCurriculum } from "~/components/Curriculum.client";
 
 export default function curriculum() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+      setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <div className="justify-center items-center flex flex-col gap-5">
       <div>
@@ -10,14 +18,10 @@ export default function curriculum() {
 
       <div>
           <DownloadCurriculum />
-        {/* <ClientOnly>
-        </ClientOnly> */}
       </div>
 
       <div>
           <Curriculum />
-        {/* <ClientOnly>
-        </ClientOnly> */}
       </div>
 
     </div>

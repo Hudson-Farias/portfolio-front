@@ -9,11 +9,15 @@ export default function curriculum() {
       </div>
 
       <div>
-        <ClientOnly><DownloadCurriculum /></ClientOnly>
+          <DownloadCurriculum />
+        {/* <ClientOnly>
+        </ClientOnly> */}
       </div>
 
       <div>
-        <ClientOnly><Curriculum /></ClientOnly>
+          <Curriculum />
+        {/* <ClientOnly>
+        </ClientOnly> */}
       </div>
 
     </div>

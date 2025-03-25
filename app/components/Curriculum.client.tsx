@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Page, Text, View, Document, StyleSheet, Link, PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
 
 import { Download } from "lucide-react";
@@ -94,6 +95,14 @@ const Resume = () => (
 )
 
 export function Curriculum() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+      setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+  
   return (
     <PDFViewer showToolbar={false} width="595" height="842">
       <Resume />
@@ -102,6 +111,14 @@ export function Curriculum() {
 }
 
 export function DownloadCurriculum() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+      setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <PDFDownloadLink document={<Resume />} fileName="hudson-farias-resume.pdf">
       <div className="inline-flex bg-gradient-to-r from-blue-500 to-slate-500 gap-2 items-center px-4 py-2 text-sm font-medium text-foreground rounded-md transition-transform duration-300 transform hover:scale-105 hover:-translate-y-1">

@@ -69,6 +69,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       </head>
       <body className="font-dmSans h-screen grid grid-rows-[1fr_14fr] overflow-hidden">
+        <Scripts />
         <Nav socialNetworks={data.social_networks_header} />
         <div className="overflow-auto scrollbar-thin scrollbar-thumb-blue-500/10 scrollbar-track-slate-500/10">
           {children}
@@ -76,7 +77,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <ScrollRestoration />
           <Footer socialNetworks={data.social_networks_footer} />
         </div>
-        <Scripts />
       </body>
     </html>
   );

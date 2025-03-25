@@ -47,7 +47,7 @@ const Resume = () => (
 
       <View style={styles.section}>
         <Text style={styles.header}>Objetivo</Text>
-        <Text style={styles.text}>Atuar como Desenvolvedor Backend e DevOps em , focando em soluções escaláveis, seguras e eficientes, aplicando boas práticas e inovação no desenvolvimento de sistemas.</Text>
+        <Text style={styles.text}>Atuar como Desenvolvedor Backend e DevOps, focando em soluções escaláveis, seguras e eficientes, aplicando boas práticas e inovação no desenvolvimento de sistemas.</Text>
       </View>
 
       <View style={styles.section}>

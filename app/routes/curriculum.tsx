@@ -9,11 +9,11 @@ export default function curriculum() {
       </div>
 
       <div>
-        <ClientOnly>{() => <DownloadCurriculum />}</ClientOnly>
+        <ClientOnly><DownloadCurriculum /></ClientOnly>
       </div>
 
       <div>
-        <ClientOnly>{() => <Curriculum />}</ClientOnly>
+        <ClientOnly><Curriculum /></ClientOnly>
       </div>
 
     </div>

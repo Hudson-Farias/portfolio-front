@@ -50,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-473439473`}
         />
@@ -65,7 +65,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               gtag('config', 'G-473439473');
             `,
           }}
-        />
+        /> */}
 
       </head>
       <body className="font-dmSans h-screen grid grid-rows-[1fr_14fr] overflow-hidden">

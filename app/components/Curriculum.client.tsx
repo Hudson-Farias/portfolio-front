@@ -93,7 +93,7 @@ const Resume = () => (
   </Document>
 )
 
-export function Curriculum() {5173
+export function Curriculum() {
   return (
     <PDFViewer showToolbar={false} width="595" height="842">
       <Resume />
